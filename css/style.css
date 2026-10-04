@@ -1,0 +1,820 @@
+@font-face {
+    font-family: "Tall Dark And Handsome";
+    src: url("../fonts/talldark.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 600px) {
+    h1,
+    .section-title {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+}
+
+/*Base*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #484349;
+    color: #F7F0F0;
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+}
+
+/*Top Bar*/
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 24px;
+}
+
+/*Logo*/
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+/*Header*/
+
+.site-header {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px 18px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(247, 240, 240, 0.95),
+        rgba(247, 240, 240, 0.65),
+        rgba(247, 240, 240, 0.15),
+        rgba(247, 240, 240, 0)
+    );
+
+    border-radius: 16px;
+
+    position: relative;
+    z-index: 10;
+}
+
+/*Navigation*/
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navigation a {
+    color: #484349;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+
+    padding: 10px 16px;
+    border-radius: 10px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.navigation a:hover {
+    background-color: #4DA1A9;
+    color: #F7F0F0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(77, 161, 169, 0.25);
+}
+
+/*Main Content*/
+
+main {
+    padding: 0;
+}
+
+h1,
+h2,
+.section-title {
+    font-family: "Tall Dark And Handsome", sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.75rem;
+    line-height: 1;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.about-page {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.about-page h1 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.about-page p {
+    margin: 0 0 80px 0;
+    line-height: 1.6;
+}
+
+.about-page h1 + p {
+    margin-bottom: 60px;
+}
+
+/*Contact Page*/
+
+.contact-page {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 24px;
+}
+
+.contact-section {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-section .section-title {
+    margin-bottom: 16px;
+}
+
+.contact-section > p {
+    color: #F7F0F0;
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+}
+
+/*Newsletter Form*/
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 14px 16px;
+
+    background-color: rgba(247, 240, 240, 0.95);
+    color: #484349;
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+
+    outline: none;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(72, 67, 73, 0.6);
+}
+
+.newsletter-form input:focus {
+    box-shadow: 0 0 0 3px rgba(247, 240, 240, 0.25);
+}
+
+.newsletter-form button {
+    padding: 14px 22px;
+
+    background-color: #F7F0F0;
+    color: #484349;
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #484349;
+    color: #F7F0F0;
+    transform: translateY(-2px);
+}
+
+/*Contact Logo*/
+
+.contact-logo {
+    margin-top: 60px;
+}
+
+.contact-logo img {
+    display: block;
+
+    width: 60%;
+    max-width: 320px;
+    height: auto;
+
+    margin: 0 auto;
+
+    opacity: 0;
+    animation: logoFade 1.4s ease forwards;
+    animation-delay: 0.4s;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.contact-logo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/*Logo Fade In*/
+
+@keyframes logoFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+/*Contact Mobile Layout*/
+
+@media (max-width: 600px) {
+
+    .contact-page {
+        padding: 40px 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .contact-logo {
+        margin-top: 45px;
+    }
+}
+
+/*Buttons*/
+
+button,
+.carousel-btn {
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/*Newsletter Button*/
+
+.newsletter-form button {
+    padding: 14px 22px;
+
+    background-color: #F7F0F0;
+    color: #484349;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.newsletter-form button:hover {
+    background-color: #4DA1A9;
+    color: #F7F0F0;
+    transform: translateY(-2px);
+}
+
+/*General Site Buttons*/
+
+.carousel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 22px;
+
+    background-color: #F7F0F0;
+    color: #484349;
+
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.carousel-btn:hover {
+    background-color: #4DA1A9;
+    color: #F7F0F0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(77, 161, 169, 0.25);
+}
+
+/*Carousel*/
+
+.carousel {
+    width: 100%;
+    height: calc(100vh - 120px);
+    min-height: 600px;
+    padding: 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+/*Carousel Slides*/
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Background Image*/
+
+.carousel-slide > img:first-child {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/*Dark Overlay*/
+
+.carousel-slide::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(72, 67, 73, 0.9) 0%,
+        rgba(72, 67, 73, 0.65) 40%,
+        rgba(72, 67, 73, 0.15) 75%,
+        rgba(72, 67, 73, 0.05) 100%
+    );
+
+    pointer-events: none;
+}
+
+/*Carousel Caption*/
+
+.carousel-caption {
+    position: absolute;
+    z-index: 2;
+
+    left: 6%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 42%;
+    max-width: 500px;
+
+    text-align: left;
+}
+
+/*Game Logo*/
+
+.carousel-title-image {
+    display: block;
+
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+
+    margin-bottom: 24px;
+}
+
+/*Carousel Description*/
+
+.carousel-caption p {
+    color: #F7F0F0;
+
+    font-size: 1.05rem;
+    line-height: 1.6;
+
+    margin-bottom: 24px;
+}
+
+/*Carousel Buttons*/
+
+.carousel-caption .carousel-btn {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/*Navigation Arrows*/
+
+.carousel-arrow {
+    position: absolute;
+    z-index: 5;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background-color: rgba(72, 67, 73, 0.65);
+    color: #F7F0F0;
+
+    border: none;
+    border-radius: 50%;
+
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.carousel-arrow.prev {
+    left: 20px;
+}
+
+.carousel-arrow.next {
+    right: 20px;
+}
+
+.carousel-arrow:hover {
+    background-color: #4DA1A9;
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+
+    box-shadow:
+        0 6px 18px rgba(77, 161, 169, 0.3);
+}
+
+/*Carousel Dots*/
+
+.carousel-dots {
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel-dots .dot {
+    width: 11px;
+    height: 11px;
+
+    display: block;
+
+    background-color: rgba(247, 240, 240, 0.5);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.carousel-dots .dot:hover {
+    background-color: #F7F0F0;
+    transform: scale(1.15);
+}
+
+.carousel-dots .dot.active {
+    background-color: #4DA1A9;
+    transform: scale(1.2);
+}
+
+/*Carousel Mobile Layout*/
+
+@media (max-width: 800px) {
+
+    .carousel {
+        padding: 10px 0 30px;
+    }
+
+    .carousel-container {
+        height: 600px;
+        border-radius: 12px;
+    }
+
+    .carousel-slide::after {
+        background: linear-gradient(
+            180deg,
+            rgba(72, 67, 73, 0.15) 0%,
+            rgba(72, 67, 73, 0.65) 40%,
+            rgba(72, 67, 73, 0.95) 100%
+        );
+    }
+
+    .carousel-caption {
+        left: 8%;
+        right: 8%;
+        bottom: 55px;
+        top: auto;
+
+        width: auto;
+        max-width: none;
+
+        transform: none;
+
+        text-align: center;
+    }
+
+    .carousel-title-image {
+        width: 80%;
+        max-width: 350px;
+
+        margin: 0 auto 18px;
+    }
+
+    .carousel-caption p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+
+        margin-bottom: 18px;
+    }
+
+    .carousel-caption .carousel-btn {
+        padding: 11px 17px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-arrow {
+        width: 42px;
+        height: 42px;
+
+        font-size: 2rem;
+    }
+
+    .carousel-arrow.prev {
+        left: 10px;
+    }
+
+    .carousel-arrow.next {
+        right: 10px;
+    }
+}
+
+/*Small Mobile*/
+
+@media (max-width: 500px) {
+
+    .carousel-container {
+        height: 550px;
+    }
+
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+    }
+
+    .carousel-title-image {
+        width: 75%;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+
+        font-size: 1.7rem;
+    }
+}
+
+/*Game Hero Banner*/
+
+.game-hero-banner {
+    position: relative;
+
+    width: 100%;
+    height: 65vh;
+
+    overflow: hidden;
+}
+
+.hero-banner-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 110%;
+
+    object-fit: cover;
+
+    filter: brightness(55%);
+
+    opacity: 0;
+
+    animation: heroFadeIn 1.2s ease forwards;
+
+    z-index: 0;
+
+    transition: transform 0.1s linear;
+}
+
+/*Dark Gradient*/
+
+.game-hero-banner::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 120px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(72, 67, 73, 0.65),
+        transparent
+    );
+
+    z-index: 2;
+}
+
+/*Hero Overlay*/
+
+.hero-overlay {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    max-width: 900px;
+    width: 90%;
+
+    padding: 2rem;
+
+    opacity: 0;
+
+    animation: overlayFadeIn 1.4s ease forwards;
+    animation-delay: 0.4s;
+
+    z-index: 2;
+}
+
+/*Hero Logo*/
+
+.hero-logo {
+    width: 480px;
+    max-width: 70vw;
+
+    margin-bottom: 1.5rem;
+}
+
+/*Hero Text*/
+
+.hero-text {
+    color: #F7F0F0;
+
+    line-height: 1.6;
+
+    margin-bottom: 1.75rem;
+
+    font-size: 1.15rem;
+}
+
+/*Hero Animations*/
+
+@keyframes heroFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes overlayFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, -35%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}

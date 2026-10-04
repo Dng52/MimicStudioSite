@@ -1,0 +1,90 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Mimic Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="{{BASE}}/images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+
+</head> <body>
+<div class="top-bar">
+    <a href="./" class="logo-link">
+        <img src="images/logo.png" alt="Logo" class="logo">
+    </a>
+
+    <header class="site-header">
+<nav class="navigation">
+    <a href="./">Home</a>
+    <a href="about/">About</a>
+    <a href="contact/">Contact</a>
+</nav>
+
+    </header>
+</div>
+
+<main> <section class="carousel">
+    <div class="carousel-container">
+
+        <div class="carousel-slide active">
+            <img src="images/SpellslingerCarousel.png" alt="Spellslinger">
+
+            <div class="carousel-caption">
+                <img
+                    src="images/SpellslingerLogo.png"
+                    alt="Spellslinger"
+                    class="carousel-title-image"
+                >
+
+                <p>
+					Choose your loadout and sling spells with friends to 
+					become the top wizard in this quick, action packed, party 
+					game arena fighter.
+
+                </p>
+
+
+                <a href="games/spellslinger" class="carousel-btn">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="images/ManashiftCarousel.png" alt="Manashift">
+
+            <div class="carousel-caption">
+                <img
+                    src="images/ManashiftLogo.png"
+                    alt="Manashift"
+                    class="carousel-title-image"
+                >
+
+                <p>
+                    Trading card shop owner by day, TCG player by night.
+                    Dive into this unique card shop simulator and deckbuilder
+                    with a playable trading card game inspired by Irish mythology.
+                </p>
+
+                <a href="games/manashift" class="carousel-btn">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+
+        <!-- Dots -->
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+<script src="js/main.js"></script>
+
+</body> </html>
