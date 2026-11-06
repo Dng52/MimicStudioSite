@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimic Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .image-gallery {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .gallery-description {
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <a href="../" class="logo-link">
+        <img src="../images/logo.png" alt="Logo" class="logo">
+    </a>
+
+    <header class="site-header">
+        <nav class="navigation">
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="../contact/">Contact</a>
+        </nav>
+    </header>
+</div>
+
+<main class="game-page">
+
+    <!-- Banner -->
+    <section class="game-hero-banner">
+
+        <div class="hero-banner-container">
+
+            <img
+                src="../images/AdventCarousel.png"
+                class="hero-banner-image hero-parallax"
+                alt="Manashift"
+            >
+
+            <div class="hero-overlay">
+
+                <img
+                    src="../images/AdventLogo.png"
+                    class="hero-logo"
+                    alt="Advent"
+                >
+
+                <p class="hero-text">
+                    Other D&D advent calendars may just be 3-4 dice sets spread throughout 24 days. We guarantee a metal dice set, 2 textured dice sets, 2 handmade props, 2 pins, 4 stickers, and 17 miniatures.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="image-gallery">
+
+        <div class="gallery-title">
+            <h2>Gallery</h2>
+            <p>Spoilers below. You've been warned!</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="../images/IMG_0473.jpg" alt="Advent gallery image 1">
+                <p class="gallery-description">
+                    Convienient and decorative box holds 24 presents.
+                </p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/IMG_0485.jpg" alt="Advent gallery image 2">
+                <p class="gallery-description">
+                    Handmade prop—potion of greater healing with d4s inside.
+                </p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/IMG_0496.jpg" alt="Advent gallery image 3">
+                <p class="gallery-description">
+                    Premium metal dice set. Set may vary.
+                </p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/IMG_0501.jpg" alt="Advent gallery image 4">
+                <p class="gallery-description">
+                    Miniatures ready for tabletop play.
+                </p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/IMG_0540.jpg" alt="Advent gallery image 5">
+                <p class="gallery-description">
+                    Each present is individually wrapped. Some are wrapped in custom made D&D wrapping paper!
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
